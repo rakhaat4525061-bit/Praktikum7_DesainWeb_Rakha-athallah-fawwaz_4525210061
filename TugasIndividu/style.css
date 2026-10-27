@@ -1,0 +1,268 @@
+/* ===== Variabel ===== */
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #3730a3;
+  --primary-soft: #eef2ff;
+  --background: #f1f5f9;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --text-secondary: #64748b;
+  --radius: 10px;
+  --shadow: 0 10px 40px rgba(79, 70, 229, 0.12);
+}
+
+/* ===== Reset & Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f1f5f9 50%, #fce7f3 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ===== Layout ===== */
+.container {
+  width: 90%;
+  max-width: 640px;
+  margin: 50px auto;
+}
+
+.registration-card {
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+  background-color: var(--surface);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* Garis aksen di atas kartu */
+.registration-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #4f46e5, #ec4899);
+}
+
+/* ===== Header ===== */
+.form-header {
+  margin-bottom: 32px;
+}
+
+.label {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.form-header h1 {
+  margin: 14px 0 8px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.form-header p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* ===== Form ===== */
+.form-group {
+  margin-bottom: 22px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 16px;
+  background-color: #f8fafc;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #c7d2fe;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background-color: var(--surface);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+textarea {
+  resize: vertical;
+}
+
+small {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ===== Radio, Checkbox, Fieldset ===== */
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+legend {
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  background-color: #f8fafc;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.option:hover {
+  background-color: var(--primary-soft);
+  border-color: #c7d2fe;
+}
+
+.option input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.option label {
+  flex: 1;
+  margin-bottom: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* ===== Tombol ===== */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.btn {
+  padding: 13px 24px;
+  border: none;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  flex: 1;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #3730a3, #4f46e5);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+}
+
+.btn-reset {
+  background-color: #f1f5f9;
+  color: var(--text-secondary);
+}
+
+.btn-reset:hover {
+  background-color: #e2e8f0;
+}
+
+.btn-secondary {
+  background-color: var(--surface);
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-soft);
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px auto;
+  }
+
+  .registration-card {
+    padding: 26px 22px;
+  }
+
+  .form-header h1 {
+    font-size: 24px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn,
+  .btn-primary {
+    width: 100%;
+  }
+}

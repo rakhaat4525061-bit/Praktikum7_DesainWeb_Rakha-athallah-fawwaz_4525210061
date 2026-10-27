@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendaftaran Kursus</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <section class="registration-card">
+
+      <div class="form-header">
+        <span class="label">PENDAFTARAN</span>
+        <h1>Form Pendaftaran Kursus</h1>
+        <p>Silakan lengkapi data berikut dengan benar.</p>
+      </div>
+
+      <form action="/proses-kursus" method="post">
+
+        <!-- text -->
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama"
+                 placeholder="Masukkan nama lengkap" required>
+        </div>
+
+        <!-- email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email"
+                 placeholder="nama@email.com" required>
+        </div>
+
+        <!-- tel -->
+        <div class="form-group">
+          <label for="telepon">Nomor Telepon</label>
+          <input type="tel" id="telepon" name="telepon"
+                 placeholder="08123456789" required>
+        </div>
+
+        <!-- date -->
+        <div class="form-group">
+          <label for="tanggal-mulai">Tanggal Mulai Kursus</label>
+          <input type="date" id="tanggal-mulai" name="tanggal_mulai" required>
+        </div>
+
+        <!-- radio -->
+        <fieldset class="form-group">
+          <legend>Jenis Kelas</legend>
+          <div class="option">
+            <input type="radio" id="kelas-online" name="jenis_kelas"
+                   value="online" required>
+            <label for="kelas-online">Online</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="kelas-offline" name="jenis_kelas"
+                   value="offline">
+            <label for="kelas-offline">Offline</label>
+          </div>
+        </fieldset>
+
+        <!-- checkbox -->
+        <div class="option">
+          <input type="checkbox" id="setuju" name="setuju" required>
+          <label for="setuju">Saya menyetujui syarat dan ketentuan</label>
+        </div>
+
+        <!-- 3 jenis button -->
+        <div class="button-group">
+          <button type="submit" class="btn btn-primary">Daftar</button>
+          <button type="reset" class="btn btn-reset">Reset</button>
+          <button type="button" class="btn btn-secondary">Bantuan</button>
+        </div>
+
+      </form>
+
+    </section>
+  </main>
+
+</body>
+</html>
